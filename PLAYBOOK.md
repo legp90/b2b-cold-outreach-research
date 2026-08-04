@@ -9,47 +9,47 @@ This playbook outlines a modern, signal-based outbound pipeline tailored for B2B
 ### Phase 1: Technical Infrastructure & Deliverability
 To protect domain reputation and bypass aggressive inbox filters (Google/Yahoo 2024–2026 standards), infrastructure must be isolated from the primary corporate domain.
 
-* **Domain & Inbox Setup:** Register 3–5 secondary domains matching the core brand (e.g., `get[company].com`). Limit sending volume to a maximum of 30–40 emails per inbox daily (*Source: Jesse Ouellette, [LeadMagic LinkedIn Update](https://linkedin.com), 15.01.2026*).
-* **DNS Authentication:** Configure strict SPF, DKIM, and DMARC protocols (`p=reject` or `p=quarantine`) across all sending infrastructure (*Source: Nick Abraham, [YouTube: Scalable Cold Email Setup](https://youtube.com), 10.02.2026*).
-* **Warm-up & List Hygiene:** Maintain a minimum 3-week automated warm-up before launching campaigns. Continuously verify email lists through API-based verification tools like Scrubby to clear catch-all addresses (*Source: Nick Abraham, [YouTube: Database Cleaning Strategies](https://youtube.com), 22.02.2026*).
+* **Domain & Inbox Setup:** Register secondary domains matching the core brand (e.g., `getcompany.com`). Limit sending volume to a maximum of 2 to 3 email accounts per domain and 30–35 cold emails daily per account (*Source: Nick Abraham, [Cold Email Infrastructure Guide](./research/youtube-transcripts/nick_abraham/cold-email-infrastructure.md) from 10.02.2026*).
+* **DNS Authentication:** Configure strict SPF, DKIM, and DMARC protocols (`p=quarantine` or `p=reject` once stable) across all sending infrastructure (*Source: Nick Abraham, [Cold Email Infrastructure Guide](./research/youtube-transcripts/nick_abraham/cold-email-infrastructure.md) from 10.02.2026*).
+* **Warm-up & List Hygiene:** Execute an automated warm-up for 14 to 21 days before launching campaigns, gradually ramping up volume from 5 emails per day (*Source: Nick Abraham, [Cold Email Infrastructure Guide](./research/youtube-transcripts/nick_abraham/cold-email-infrastructure.md) from 10.02.2026*).
 
 ---
 
 ### Phase 2: Signal-Based Prospecting & Data Extraction
 Targeting should be triggered by real-time organizational signals rather than static demographic databases.
 
-* **Data Scraping & Enrichment:** Utilize automated API workflows via Supadata and custom scrapers to pull dynamic buying intent signals (e.g., funding rounds, key hires, software stack changes) (*Source: Nadir Mansouri, [LinkedIn Post on Growth Workflows](https://linkedin.com), 04.03.2026*).
-* **Programmatic Segmentation:** Segment prospect lists dynamically using API integrations (e.g., Growthlabs workflows) to match hyper-specific value propositions to exact buyer roles (*Source: Eric Nowoslawski, [YouTube: Programmatic Outbound Automation](https://youtube.com), 18.03.2026*).
+* **Data Scraping & Enrichment:** Utilize automated API workflows via Supadata and custom scrapers to pull dynamic buying intent signals (e.g., funding rounds, key hires, software stack changes) (*Source: Nadir Mansouri, [Growth Workflows Research](./research/sources.md) from 04.03.2026*).
+* **Programmatic Segmentation:** Segment prospect lists dynamically using API integrations to match hyper-specific value propositions to exact buyer roles (*Source: Eric Nowoslawski, [Automation Workflows](./research/sources.md) from 18.03.2026*).
 
 ---
 
 ### Phase 3: Copywriting Framework & Outreach Execution
 Prospects respond to brief, relevant, and low-friction problem statements.
 
-* **Short-Form Messaging:** Keep email copy under 75 words. Focus entirely on the prospect's pain point and eliminate generic corporate intros (*Source: Will Allred, [Lavender Email Psychology Breakdown](https://linkedin.com), 12.04.2026*).
-* **Low-Friction Calls-to-Action (CTA):** End emails with interest-based CTAs (e.g., *"Worth a quick look?"*) rather than demanding immediate calendar bookings (*Source: Jed Mahrle, [Practical Prospecting Newsletter](https://linkedin.com), 28.04.2026*).
+* **Short-Form Messaging & The 30-Word Rule:** Keep email copy short and direct. Emails under 30 words see up to a 40% increase in response rates. Optimize for mobile previews and keep subject lines between 1 and 3 words (*Source: Will Allred, [30-Word Rule Framework](./research/linkedin-posts/will_allred/email-copywriting-frameworks.md) from 12.04.2026*).
+* **Low-Friction Calls-to-Action (CTA):** Replace aggressive 30-minute meeting requests with simple, low-friction CTAs (e.g., *"Are you open to exploring this next week?"*) (*Source: Will Allred, [30-Word Rule Framework](./research/linkedin-posts/will_allred/email-copywriting-frameworks.md) from 12.04.2026*).
 
 ---
 
 ## 2. Where Experts Disagree
 
 ### Disagreement 1: High-Volume Mass Cold Email vs. Low-Volume Signal-Based Outreach
-* **Author A (Alex Berman):** Recommends sending high-volume email blasts (hundreds of emails daily per domain) using generalized templates to capture market share through sheer probabilities (*Source: Alex Berman, [YouTube: Scaling Cold Email Campaigns](https://youtube.com), 11.01.2025*).
-* **Author B (Will Allred & Nadir Mansouri):** Advocates for low-volume, hyper-targeted campaigns (20–30 emails/day per domain) triggered strictly by real-time buying signals (*Source: Will Allred, [LinkedIn Post](https://linkedin.com), 05.02.2026*).
-* **My Position:** **I side with Author B.** Modern spam filters algorithms severely penalize high-volume, unengaged email traffic. Sending targeted emails based on real triggers yields higher conversion rates and preserves domain health over the long term.
+* **Author A (Alex Berman):** Recommends sending high-volume email blasts (hundreds of emails daily per domain) using generalized templates to capture market share through sheer probabilities (*Source: Alex Berman, [Experiment 27 Research](./research/sources.md) from 11.01.2025*).
+* **Author B (Will Allred & Nadir Mansouri):** Advocates for low-volume, hyper-targeted campaigns (20–30 emails/day per domain) triggered strictly by real-time buying signals (*Source: Will Allred, [30-Word Rule Framework](./research/linkedin-posts/will_allred/email-copywriting-frameworks.md) from 12.04.2026*).
+* **My Position:** **I side with Author B.** Modern spam filter algorithms severely penalize high-volume, unengaged email traffic. Sending targeted emails based on real triggers yields higher conversion rates and preserves domain health over the long term.
 
 ---
 
 ### Disagreement 2: HTML/Rich-Media Customization vs. Strict Plain Text
-* **Author A (Guillaume Moubeche):** Promotes rich HTML elements, dynamic custom images, and personalized landing page links embedded directly in initial touchpoints (*Source: Guillaume Moubeche, [lemlist Growth Strategies](https://youtube.com), 19.03.2025*).
-* **Author B (Jesse Ouellette):** Recommends 100% plain text emails without links, tracking pixels, or HTML formatting in cold outreach to maximize inbox placement (*Source: Jesse Ouellette, [LeadMagic Technical Breakdown](https://linkedin.com), 14.02.2026*).
+* **Author A (Guillaume Moubeche):** Promotes rich HTML elements, dynamic custom images, and personalized landing page links embedded directly in initial touchpoints (*Source: Guillaume Moubeche, [lemlist Growth Research](./research/sources.md) from 19.03.2025*).
+* **Author B (Jesse Ouellette):** Recommends 100% plain text emails without links, tracking pixels, or HTML formatting in cold outreach to maximize inbox placement (*Source: Jesse Ouellette, [LeadMagic Deliverability Research](./research/sources.md) from 14.02.2026*).
 * **My Position:** **I side with Author B.** Security engines instantly flag cold emails containing heavy HTML or tracking links. Plain text ensures maximum deliverability into the primary inbox.
 
 ---
 
 ### Disagreement 3: Aggressive Multi-Channel Overlap vs. Email-First Execution
-* **Author A (Charlotte Johnson):** Recommends executing cold calls, LinkedIn engagement, and cold emails simultaneously on Day 1 of a sequence (*Source: Charlotte Johnson, [Outbound Sales Cadences](https://linkedin.com), 08.03.2026*).
-* **Author B (Jed Mahrle):** Recommends validating target lists and messaging via cold email first before committing SDR resources to manual channels like phone calls (*Source: Jed Mahrle, [Practical Prospecting Frameworks](https://linkedin.com), 17.04.2026*).
+* **Author A (Charlotte Johnson):** Recommends executing cold calls, LinkedIn engagement, and cold emails simultaneously on Day 1 of a sequence (*Source: Charlotte Johnson, [Outbound Sales Research](./research/sources.md) from 08.03.2026*).
+* **Author B (Jed Mahrle):** Recommends validating target lists and messaging via cold email first before committing SDR resources to manual channels like phone calls (*Source: Jed Mahrle, [Practical Prospecting Research](./research/sources.md) from 28.04.2026*).
 * **My Position:** **I side with Author B.** For early-stage B2B SaaS companies with lean teams, starting with email validation reduces operational overhead before scaling into multi-channel campaigns.
 
 ---
